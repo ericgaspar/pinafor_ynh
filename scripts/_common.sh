@@ -4,7 +4,7 @@
 # COMMON VARIABLES
 #=================================================
 
-YNH_NODEJS_VERSION=14
+YNH_NODEJS_VERSION=12
 
 #=================================================
 # PERSONAL HELPERS
