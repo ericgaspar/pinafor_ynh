@@ -19,12 +19,8 @@ app=$YNH_APP_INSTANCE_NAME
 domain=$(ynh_app_setting_get --app=$app --key=domain)
 path_url=$(ynh_app_setting_get --app=$app --key=path)
 is_public=$(ynh_app_setting_get --app=$app --key=is_public)
-admin_email=$(ynh_app_setting_get --app=$app --key=admin_email)
 final_path=$(ynh_app_setting_get --app=$app --key=final_path)
 port=$(ynh_app_setting_get --app=$app --key=port)
-db_name=$(ynh_app_setting_get --app=$app --key=psql_db)
-db_pwd=$(ynh_app_setting_get --app=$app --key=psqlpwd)
-datadir=$(ynh_app_setting_get --app=$app --key=datadir)
 
 #=================================================
 # CHECK VERSION
@@ -52,21 +48,6 @@ then
    datadir="/home/yunohost.app/${app}/storage"
    ynh_app_setting_set --app=$app --key=datadir --value=$datadir
 fi
-
-# Close a port
-if yunohost firewall list | grep -q "\- $port$"
-then
-	ynh_script_progression --message="Closing port $port"
-	ynh_exec_warn_less yunohost firewall disallow TCP $port
-fi
-
-# Add PostgreSQL extension for v1.0.0-beta.10.pre.1
-ynh_psql_execute_as_root --sql="CREATE EXTENSION IF NOT EXISTS unaccent;" --database=$db_name 
-ynh_psql_execute_as_root --sql="CREATE EXTENSION IF NOT EXISTS pg_trgm;" --database=$db_name 
-
-# Remove repository
-ynh_secure_remove --file="/etc/apt/sources.list.d/jessie-backports.list"
-ynh_secure_remove --file="/etc/apt/sources.list.d/yarn.list"
 
 #=================================================
 # BACKUP BEFORE UPGRADE THEN ACTIVE TRAP
@@ -267,18 +248,6 @@ yunohost service add $app --description "$app daemon for Peertube" --log "$datad
 ynh_script_progression --message="Starting a systemd service..."
 
 ynh_systemd_action --service_name=$app --action="start" --log_path="systemd" --line_match="Server listening on localhost"
-
-#=================================================
-# SETUP SSOWAT
-#=================================================
-ynh_script_progression --message="Upgrading SSOwat configuration..."
-
-# Make app public if necessary
-if [ $is_public -eq 1 ]
-then
-	# unprotected_uris allows SSO credentials to be passed anyway
-	ynh_app_setting_set --app=$app --key=unprotected_uris --value="/"
-fi
 
 #=================================================
 # RELOAD NGINX
