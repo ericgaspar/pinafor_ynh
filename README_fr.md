@@ -11,11 +11,11 @@ Si vous n'avez pas YunoHost, consultez [le guide](https://yunohost.org/#/install
 ## Vue d'ensemble
 Description rapide de cette application.
 
-**Version incluse :** 1.0
+**Version incluse :** 1.20.0
 
 ## Captures d'écran
 
-![](Lien vers une capture d'écran de cette application.)
+![](https://cdn.mastodon.technology/media_attachments/files/001/394/437/original/6589a6268c50b378.png)
 
 ## Démo
 

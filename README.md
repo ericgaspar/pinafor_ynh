@@ -9,17 +9,17 @@
 If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/install) to learn how to install it.*
 
 ## Overview
-Quick description of this app.
+An alternative web client for Mastodon, focused on speed and simplicity.
 
-**Shipped version:** 1.0
+**Shipped version:** 1.20.0
 
 ## Screenshots
 
-![](Link to a screenshot of this app.)
+![](https://cdn.mastodon.technology/media_attachments/files/001/394/437/original/6589a6268c50b378.png)
 
 ## Demo
 
-* [Official demo](Link to a demo site for this app.)
+* [Official demo](https://pinafore.social/)
 
 ## Configuration
 
@@ -49,9 +49,6 @@ Can the app be used by multiple users?
 ## Additional information
 
 * Other info you would like to add about this app.
-
-**More info on the documentation page:**  
-https://yunohost.org/packaging_apps
 
 ## Links
 
