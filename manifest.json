@@ -40,8 +40,8 @@
                     "en": "Choose a path for Pinafor",
                     "fr": "Choisissez un chemin pour Pinafor"
                 },
-                "example": "/pinafor",
-                "default": "/pinafor"
+                "example": "/",
+                "default": "/"
             },
             {
                 "name": "is_public",
