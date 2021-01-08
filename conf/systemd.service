@@ -9,7 +9,7 @@ Group=__APP__
 WorkingDirectory=__FINALPATH__
 Environment="NODE_ENV=production"
 Environment="__YNH_NODE_LOAD_PATH__"
-ExecStart=__FINALPATH__/server.js PORT=9000
+ExecStart=__FINALPATH__ node server.js PORT=4002
 Restart=always
 
 [Install]
