@@ -134,7 +134,7 @@ chown -R $app: $final_path
 #=================================================
 ynh_script_progression --message="Integrating service in YunoHost..."
 
-yunohost service add $app --description "Alternative web client for Mastodon" --log "$datadir/logs/peertube.log"
+yunohost service add $app --description="Alternative web client for Mastodon" --log="/var/log/$app/$app.log"
 
 #=================================================
 # START SYSTEMD SERVICE
