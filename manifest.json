@@ -34,13 +34,14 @@
                 "example": "example.com"
             },
             {
-                "name": "email",
-                "type": "string",
+                "name": "path",
+                "type": "path",
                 "ask": {
-                    "en": "Choose an admin email (can be changed after installation)",
-                    "fr": "Choisissez une adresse e-mail d'administrateur (peut être modifiée après l'installation)"
+                    "en": "Choose a path for Pinafor",
+                    "fr": "Choisissez un chemin pour Pinafor"
                 },
-                "example": "johndoe@example.com"
+                "example": "/pinafor",
+                "default": "/pinafor"
             },
             {
                 "name": "is_public",
