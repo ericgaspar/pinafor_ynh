@@ -1,84 +1,75 @@
-# PeerTube pour YunoHost
+# Pinafor pour YunoHost
 
-[![Niveau d'intégration](https://dash.yunohost.org/integration/peertube.svg)](https://dash.yunohost.org/appci/app/peertube) ![](https://ci-apps.yunohost.org/ci/badges/peertube.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/peertube.maintain.svg)  
-[![Installer PeerTube pour YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=peertube)
+[![Niveau d'intégration](https://dash.yunohost.org/integration/REPLACEBYYOURAPP.svg)](https://dash.yunohost.org/appci/app/REPLACEBYYOURAPP) ![](https://ci-apps.yunohost.org/ci/badges/REPLACEBYYOURAPP.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/REPLACEBYYOURAPP.maintain.svg)  
+[![Installer REPLACEBYYOURAPP avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=REPLACEBYYOURAPP)
 
 *[Read this readme in english.](./README.md)* 
 
-> *Ce package vous permet d'installer PeerTube rapidement et simplement sur un serveur YunoHost.  
+> *Ce package vous permet d'installer REPLACEBYYOURAPP rapidement et simplement sur un serveur YunoHost.  
 Si vous n'avez pas YunoHost, consultez [le guide](https://yunohost.org/#/install) pour apprendre comment l'installer.*
 
 ## Vue d'ensemble
+Description rapide de cette application.
 
-### Qu'est-ce que PeerTube ?
-PeerTube est une plateforme de streaming vidéo fédérée (ActivityPub) utilisant P2P (BitTorrent) directement dans le navigateur Web, en utilisant <a href="https://github.com/feross/webtorrent"> WebTorrent </a>.
-### Why PeerTube?
-
-Nous ne pouvons pas créer d'alternatives de streaming vidéo FOSS à YouTube, Dailymotion, Vimeo... avec un logiciel centralisé. Une organisation seule ne peut pas avoir assez d'argent pour payer la bande passante et le stockage vidéo de son serveur.
-Nous avons donc besoin d'un réseau décentralisé de serveurs « semant » des vidéos (comme [Hubzilla YunoHost](https://github.com/YunoHost-Apps/hubzilla_ynh), [Friendica YunoHost](https://github.com/YunoHost-Apps/friendica_ynh), [Mastodon YunoHost](https://github.com/YunoHost-Apps/mastodon_ynh)), [Diaspora](https://github.com/diaspora/diaspora) ([Diaspora YunoHost](https://github.com/YunoHost-Apps/diaspora_ynh)),[Funkwhale](https://funkwhale.audio) ([Funkwhale YunoHost](https://github.com/YunoHost-Apps/funkwhale_ynh)).
-Mais ce n'est pas suffisant car une vidéo pourrait devenir célèbre et surcharger le serveur. C'est la raison pour laquelle nous devons utiliser un protocole P2P pour limiter la charge du serveur. Grâce à [WebTorrent](https://github.com/feross/webtorrent), nous pouvons faire du P2P (donc BitTorrent) dans le navigateur Web, dès aujourd'hui.
-
-### Pourquoi est-ce cool ?
-Les serveurs sont gérés indépendamment par différentes personnes et organisations. Ils peuvent appliquer des politiques de modération extrêmement différentes, afin que vous puissiez en trouver ou en créer une qui correspond parfaitement à vos goûts.
-
-En regardant une vidéo, vous aidez l'hébergeur à la diffuser en devenant vous-même un diffuseur de la vidéo. Chaque instance n'a pas besoin de beaucoup d'argent pour diffuser les vidéos de ses utilisateurs.
-
-**Version incluse :** 3.0.0
-
-## Points importants à lire avant l'installation
-
-1. Nécessite un **domaine dédié** comme **peertube.domain.tld**.
-1. **Pas de support LDAP** (bloqué jusqu'à ce que le noyau PeerTube en amont l'implémente)
-1. Le nom d'utilisateur de l'administrateur est: **root**.
-1. **Le mot de passe administrateur** sera envoyé à l'adresse email indiquée au moment de l'installation.
-1. L'URL ne peut pas être modifiée une fois sélectionnée. Choisissez judicieusement le domaine.
-1. Vous avez besoin de plus de **1 Go** de RAM. Si vous ne l'avez pas, veuillez créer une **mémoire swap**.
-
- 
-        $ dd if=/dev/zero of=/swapfile bs=1024 count=1048576
-        $ mkswap /swapfile
-        $ swapon /swapfile
-        $ echo "/swapfile swap swap defaults 0 0" >> /etc/fstab
-
-1. Cette application est **multi-instance** (vous pouvez avoir plus d'une instance PeerTube en cours d'exécution sur un serveur YunoHost)
-1. **Si vous êtes hébergé sur une machine virtuelle OVH ou rencontrez `gyp ERR! configure error`, veuillez passer à [ovh_fix](https://github.com/YunoHost-Apps/peertube_ynh/tree/ovh_fix)**
+**Version incluse :** 1.0
 
 ## Captures d'écran
 
-![](https://framablog.org/wp-content/uploads/2018/03/Framatube-au-lancement.png)
+![](Lien vers une capture d'écran de cette application.)
 
 ## Démo
 
- * [Démo](http://peertube.cpy.re)
+* [Démo officielle](Lien vers un site de démonstration de cette application.)
+
+## Configuration
+
+Comment configurer cette application : via le panneau d'administration, un fichier brut en SSH ou tout autre moyen.
 
 ## Documentation
 
- * Documentation officielle : https://docs.joinpeertube.org/
- * Documentation YunoHost : https://yunohost.org/#/app_peertube_fr
+ * Documentation officielle : Lien vers la documentation officielle de cette application.
+ * Documentation YunoHost : Si une documentation spécifique est nécessaire, n'hésitez pas à contribuer.
 
 ## Caractéristiques spécifiques YunoHost
 
+#### Support multi-utilisateur
+
+* L'authentification LDAP et HTTP est-elle prise en charge ?
+* L'application peut-elle être utilisée par plusieurs utilisateurs ?
+
 #### Architectures supportées
 
-* x86-64 - [![Build Status](https://ci-apps.yunohost.org/ci/logs/peertube%20%28Apps%29.svg)](https://ci-apps.yunohost.org/ci/apps/peertube/)
-* ARMv8-A - [![Build Status](https://ci-apps-arm.yunohost.org/ci/logs/peertube%20%28Apps%29.svg)](https://ci-apps-arm.yunohost.org/ci/apps/peertube/)
+* x86-64 - [![Build Status](https://ci-apps.yunohost.org/ci/logs/REPLACEBYYOURAPP%20%28Apps%29.svg)](https://ci-apps.yunohost.org/ci/apps/REPLACEBYYOURAPP/)
+* ARMv8-A - [![Build Status](https://ci-apps-arm.yunohost.org/ci/logs/REPLACEBYYOURAPP%20%28Apps%29.svg)](https://ci-apps-arm.yunohost.org/ci/apps/REPLACEBYYOURAPP/)
+
+## Limitations
+
+* Limitations connues.
+
+## Informations additionnelles
+
+* Autres informations que vous souhaitez ajouter sur cette application.
+
+**Plus d'informations sur la page de documentation :**  
+https://yunohost.org/packaging_apps
 
 ## Liens
 
- * Signaler un bug : https://github.com/YunoHost-Apps/peertube_ynh/issues
- * Site de l'application : https://joinpeertube.org/fr/
- * Dépôt de l'application principale : https://github.com/Chocobozzz/PeerTube/
+ * Signaler un bug : https://github.com/YunoHost-Apps/REPLACEBYYOURAPP_ynh/issues
+ * Site de l'application : Lien vers le site officiel de cette application.
+ * Dépôt de l'application principale : Lien vers le dépôt officiel de l'application principale.
  * Site web YunoHost : https://yunohost.org/
 
 ---
 
-## Developer info
+## Informations pour les développeurs
 
-Please send your pull request to the [testing branch](https://github.com/YunoHost-Apps/peertube_ynh/tree/testing).
+**Seulement si vous voulez utiliser une branche de test pour le codage, au lieu de fusionner directement dans la banche principale.**
+Merci de faire vos pull request sur la [branche testing](https://github.com/YunoHost-Apps/REPLACEBYYOURAPP_ynh/tree/testing).
 
-To try the testing branch, please proceed like that.
+Pour essayer la branche testing, procédez comme suit.
 ```
-sudo yunohost app install https://github.com/YunoHost-Apps/peertube_ynh/tree/testing --debug
-or
-sudo yunohost app upgrade peertube -u https://github.com/YunoHost-Apps/peertube_ynh/tree/testing --debug
+sudo yunohost app install https://github.com/YunoHost-Apps/REPLACEBYYOURAPP_ynh/tree/testing --debug
+ou
+sudo yunohost app upgrade REPLACEBYYOURAPP -u https://github.com/YunoHost-Apps/REPLACEBYYOURAPP_ynh/tree/testing --debug
 ```

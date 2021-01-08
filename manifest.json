@@ -1,6 +1,6 @@
 {
-    "name": "PeerTube",
-    "id": "peertube",
+    "name": "Pinafor",
+    "id": "pinafor",
     "packaging_format": 1,
     "description": {
         "en": "Video streaming platform using P2P directly in the web browser, connected to a federated network",
@@ -11,11 +11,8 @@
     "license": "AGPL-3.0-only",
     "maintainer": [
         {
-            "name": "Anmol Sharma",
-            "email": "anmol@datamol.org"
-        },
-        {
-            "name": "yalh76"
+            "name": "",
+            "email": ""
         }
     ],
     "requirements": {
@@ -31,8 +28,8 @@
                 "name": "domain",
                 "type": "domain",
                 "ask": {
-                    "en": "Choose a domain name for PeerTube",
-                    "fr": "Choisissez un nom de domaine pour PeerTube"
+                    "en": "Choose a domain name for Pinafor",
+                    "fr": "Choisissez un nom de domaine pour Pinafor"
                 },
                 "example": "example.com"
             },

@@ -1,6 +1,6 @@
-SOURCE_URL=https://github.com/Chocobozzz/PeerTube/releases/download/v3.0.0/peertube-v3.0.0.tar.xz
-SOURCE_SUM=a586cec1e54823b673b8bc29cd44c8df0f100f682afc257172da1ec7e76699c9
+SOURCE_URL=https://github.com/nolanlawson/pinafore/archive/v1.20.0.zip
+SOURCE_SUM=0d50e7d2cd4f84dcbae7edfec07437fca1f719616a0efe5877ffb325b1e92a09
 SOURCE_SUM_PRG=sha256sum
-SOURCE_FORMAT=tar.xz
+SOURCE_FORMAT=zip
 SOURCE_IN_SUBDIR=true
 SOURCE_FILENAME=
