@@ -3,11 +3,11 @@
     "id": "pinafor",
     "packaging_format": 1,
     "description": {
-        "en": "Video streaming platform using P2P directly in the web browser, connected to a federated network",
-        "fr": "Plateforme de diffusion vidéo par P2P directement dans le navigateur, et connectée à un réseau fédéralisé"
+        "en": "Alternative web client for Mastodon",
+        "fr": ""
     },
-    "version": "3.0.0~ynh1",
-    "url": "https://github.com/Chocobozzz/PeerTube",
+    "version": "1.20.0~ynh1",
+    "url": "https://github.com/nolanlawson/pinafore",
     "license": "AGPL-3.0-only",
     "maintainer": [
         {
